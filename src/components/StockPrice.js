@@ -16,7 +16,7 @@ const StockPrice = ({ sheetId, range }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       dispatch(fetchStockPrice(sheetId, range));
-    }, 5000);
+    }, 100000); // 10 seconds
 
     return () => clearInterval(interval);
   }, [dispatch, sheetId, range]);

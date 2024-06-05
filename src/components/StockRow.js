@@ -1,22 +1,22 @@
-import React from "react";
+import React from 'react';
+import LivePrice from './LivePrice';
 
-const StockRow = React.memo(({ row, index, expandedRows, toggleRow, realTimePrice }) => {
+const StockRow = React.memo(({ row, index, expandedRows, toggleRow }) => {
+  const isExpanded = expandedRows.includes(index);
+
   return (
     <>
       <div className="stock-row" key={index}>
         <div className="stock-overview">
-          <span className="company-name">{row[1]}</span> {/* Company Name */}
-          <span className="current-price">
-            ₹{realTimePrice !== undefined ? realTimePrice : row[2]}
-          </span> {/* Current Price */}
+          <span className="company-name">{row[1]}</span>
+          <span className="current-price"><LivePrice ticker={row[0]} /></span>
           <button className="toggle-details" onClick={() => toggleRow(index)}>
-            {expandedRows.includes(index) ? "Hide Details" : "Show Details"}
+            {isExpanded ? 'Hide Details' : 'Show Details'}
           </button>
         </div>
       </div>
-      {expandedRows.includes(index) && (
+      {isExpanded && (
         <div className="stock-details">
-          {/* Display additional details */}
           <p className="price-open">Price Open: ₹{row[3]}</p>
           <p className="todays-high">Today's High: ₹{row[4]}</p>
           <p className="todays-low">Today's Low: ₹{row[5]}</p>

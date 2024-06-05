@@ -4,6 +4,7 @@ import store from './store';
 import StockPrice from './components/StockPrice';
 import './App.css';
 
+
 function App() {
   return (
     <Provider store={store}>
@@ -17,3 +18,4 @@ function App() {
 }
 
 export default App;
+
