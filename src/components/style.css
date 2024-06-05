@@ -1,0 +1,140 @@
+/* Container for the stock data */
+body{
+  background-image: linear-gradient( #3D52A0, #EDE8F5);
+
+}
+
+.stock-data {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Title of the stock data section */
+.stock-data-title {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #bd0d0d;
+  font-weight: 900;
+}
+
+/* Container for each stock row */
+.stock-row {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+  width: 65%;
+}
+
+.stock-row:hover {
+  background-color: #d4b1b1bc;
+}
+
+/* Overview section for each stock */
+.stock-overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Company name styling */
+.company-name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Current price styling */
+.current-price {
+  font-size: 1.2em;
+  color: #28a745;
+}
+
+/* Toggle button styling */
+.toggle-details {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-details:hover {
+  background-color: #0056b3;
+}
+
+/* Details section for each stock */
+.stock-details {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual detail styling */
+.stock-details p {
+  margin: 5px 0;
+  font-size: 1em;
+}
+
+/* Styling for different stock details */
+.price-open,
+.todays-high,
+.todays-low,
+.volume,
+.market-cap,
+.eps,
+.pe-ratio,
+.high52,
+.low52,
+.change {
+  color: #555;
+}
+
+/* Additional styling for visual appeal */
+.price-open {
+  color: #007bff;
+}
+
+.todays-high {
+  color: #28a745;
+}
+
+.todays-low {
+  color: #dc3545;
+}
+
+.volume {
+  color: #6c757d;
+}
+
+.market-cap {
+  color: #ffc107;
+}
+
+.eps {
+  color: #17a2b8;
+}
+
+.pe-ratio {
+  color: #fd7e14;
+}
+
+.high52 {
+  color: #20c997;
+}
+
+.low52 {
+  color: #e83e8c;
+}
+
+.change {
+  color: #6610f2;
+}
