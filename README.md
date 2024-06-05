@@ -29,3 +29,5 @@ Ensure you have the following installed:
 
 2. Set up the proxy:
     -Create a setupProxy.js file in the src directory
+
+## More Details of project to be uploaded soon.
