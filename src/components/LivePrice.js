@@ -1,24 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-const cheerio = require('cheerio');
-
-const fetchLivePrice = async (ticker) => {
-  const tik = ticker;
-  const exchange = 'NSE';
-  const url = `/api/finance/quote/${tik}:${exchange}?hl=en`;
-  console.log(url);
+import { fetchLivePrice } from '../actions';
 
 
-  try {
-    const response = await axios.get(url);
-    const $ = cheerio.load(response.data);
-    const price = $('div.YMlKec.fxKbKc').text();
-    return price;
-  } catch (error) {
-    console.log('Error fetching data:', error);
-    return null;
-  }
-};
 
 const LivePrice = ({ ticker }) => {
   const [price, setPrice] = useState(null);

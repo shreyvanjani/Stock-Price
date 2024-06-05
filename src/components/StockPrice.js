@@ -32,11 +32,11 @@ const StockPrice = ({ sheetId, range }) => {
   };
 
   // if (loading) return <div>Loading...</div>;
-  // if (error) return <div>Error: {error}</div>;
+  if (error) return <div>Error: {error}</div>;
 
   return (
     <div className="stock-data">
-      <h1 className="stock-data-title">Stock Analysis of 20 Companies</h1>
+      <h1 className="stock-data-title">Live Stock Tracking</h1>
       {data.map((row, index) => (
         <StockRow
           key={index}

@@ -1,4 +1,5 @@
 import axios from 'axios';
+const cheerio = require('cheerio');
 
 export const FETCH_STOCK_PRICE_REQUEST = 'FETCH_STOCK_PRICE_REQUEST';
 export const FETCH_STOCK_PRICE_SUCCESS = 'FETCH_STOCK_PRICE_SUCCESS';
@@ -31,4 +32,22 @@ export const fetchStockPrice = (sheetId, range) => {
       dispatch(fetchStockPriceFailure(error.message));
     }
   };
+};
+
+export const fetchLivePrice = async (ticker) => {
+  const tik = ticker;
+  const exchange = 'NSE';
+  const url = `/api/finance/quote/${tik}:${exchange}?hl=en`;
+  console.log(url);
+
+
+  try {
+    const response = await axios.get(url);
+    const $ = cheerio.load(response.data);
+    const price = $('div.YMlKec.fxKbKc').text();
+    return price;
+  } catch (error) {
+    console.log('Error fetching data:', error);
+    return null;
+  }
 };
