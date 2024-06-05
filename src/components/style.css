@@ -1,6 +1,7 @@
 /* Container for the stock data */
 body{
-  background-image: linear-gradient( #3D52A0, #EDE8F5);
+  /* background-image: linear-gradient( #2a1b3d , #44318d); */
+  background-image: linear-gradient( 109.6deg,  rgba(112,246,255,0.33) 11.2%, rgba(221,108,241,0.26) 42%, rgba(229,106,253,0.71) 71.5%, rgba(123,183,253,1) 100.2% );
 
 }
 
@@ -9,6 +10,7 @@ body{
   margin: 0 auto;
   padding: 20px;
   font-family: 'Courier New', Courier, monospace;
+  /* height: 100%; */
 }
 
 /* Title of the stock data section */
@@ -16,8 +18,9 @@ body{
   font-size: 2em;
   text-align: center;
   margin-bottom: 20px;
-  color: #bd0d0d;
+  color: #080567;
   font-weight: 900;
+  height: 100%;
 }
 
 /* Container for each stock row */
@@ -28,11 +31,12 @@ body{
   padding: 10px;
   background-color: #f9f9f9;
   transition: background-color 0.3s;
-  width: 65%;
+  width: 60%;
+  
 }
 
 .stock-row:hover {
-  background-color: #d4b1b1bc;
+  background-color: #d4b1b15a;
 }
 
 /* Overview section for each stock */
@@ -46,18 +50,21 @@ body{
 .company-name {
   font-size: 1.2em;
   font-weight: bold;
+  width: 40%;
 }
 
 /* Current price styling */
 .current-price {
   font-size: 1.2em;
-  color: #28a745;
+  font-weight: bolder;
+  color: #28CC9E;
+margin-right: 10%;
 }
 
 /* Toggle button styling */
 .toggle-details {
   padding: 5px 10px;
-  background-color: #007bff;
+  background-color: #149cdbba;
   color: white;
   border: none;
   border-radius: 3px;
@@ -66,12 +73,14 @@ body{
 }
 
 .toggle-details:hover {
-  background-color: #0056b3;
+  background-color: #14894f;
 }
 
 /* Details section for each stock */
 .stock-details {
+  margin-left:65%;
   margin-top: 10px;
+  margin-bottom: 10px;
   padding: 10px;
   background-color: #fff;
   border-radius: 5px;
